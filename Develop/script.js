@@ -1,25 +1,25 @@
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
+var generateBtn = document.querySelector("#generate");            // Located HTML from DOM  to able to manipulated webpage
 
 function generatePassword(){
 var finalArray=[]
-var finalPassword = "";
+var finalPassword = "";                      //Created function and Assigned Varaiables
 
-var lowerCase = ["a","b","c"]
-var upperCase = ["A","B","C",]
-var numeric = ["1","2","3"]
-var specialCase = ["!","%","*"]
+var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+var numeric = ["1","2","3","4","5","6","7","8","9","0"]                         //created Variable with strings for password generate selection
+var specialCase = ["!","%","*","@","#","$","^","&","(",")","-","_","+","=","[","]",";","?","<",">","/",":"]
+
 var passwordLength = prompt("Please establish length of password")
-
-var lowercaseLength = prompt("Please choose lowercase")
-var specialcaseLength = prompt("Please choose specialcase")
-var uppercaseLength = prompt("Please choose uppercase")
+var lowercaseLength = confirm("Please choose lowercase")
+var specialcaseLength = confirm("Please choose specialcase")
+var uppercaseLength = confirm("Please choose uppercase")
 var numericLength = confirm("Please choose numeric")
 console.log(lowercaseLength, specialcaseLength, uppercaseLength, numericLength,)
 
 if (lowercaseLength === true) {
   finalArray=finalArray.concat(lowerCase)
-}
+}                                                                               //combinded arrays using concat
 if (specialcaseLength === true) {
   finalArray=finalArray.concat(specialCase)
 }
@@ -35,13 +35,15 @@ if (numericLength=== true) {
 
 
 for(var i = 0; i<passwordLength;i++){
-  var randomnumber = Math.floor(Math.random()*finalArray.length)
+  var randomnumber = Math.floor(Math.random()*finalArray.length)       //created for-loop 
   finalPassword += finalArray[randomnumber]
 }
 
-  return finalPassword
+  return finalPassword                                      // stopped for-lop
 
 } 
+
+
 
 
 
@@ -65,7 +67,7 @@ function writePassword() {
 }
 
 
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword);         // Added event listner
 
 
 
@@ -77,21 +79,3 @@ generateBtn.addEventListener("click", writePassword);
 
 
 
-
-
-
-// IVEN I need a new, secure password
-// WHEN I click the button to generate a password
-// THEN I am presented with a series of prompts for password criteria
-// WHEN prompted for password criteria
-// THEN I select which criteria to include in the password
-// WHEN prompted for the length of the password
-// THEN I choose a length of at least 8 characters and no more than 128 characters
-// WHEN prompted for character types to include in the password
-// THEN I choose lowercase, uppercase, numeric, and/or special characters
-// WHEN I answer each prompt
-// THEN my input should be validated and at least one character type should be selected
-// WHEN all prompts are answered
-// THEN a password is generated that matches the selected criteria
-// WHEN the password is generated
-// THEN the password is either displayed in an alert or written to the pag
