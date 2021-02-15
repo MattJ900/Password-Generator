@@ -1,4 +1,3 @@
-// Assignment Code
 var generateBtn = document.querySelector("#generate");            // Located HTML from DOM  to able to manipulated webpage
 
 function generatePassword(){
