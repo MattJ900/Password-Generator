@@ -11,9 +11,9 @@ var numeric = ["1","2","3"]
 var specialCase = ["!","%","*"]
 var passwordLength = prompt("Please establish length of password")
 
-var lowercaseLength = confirm("Please choose lowercase")
-var specialcaseLength = confirm("Please choose specialcase")
-var uppercaseLength = confirm("Please choose uppercase")
+var lowercaseLength = prompt("Please choose lowercase")
+var specialcaseLength = prompt("Please choose specialcase")
+var uppercaseLength = prompt("Please choose uppercase")
 var numericLength = confirm("Please choose numeric")
 console.log(lowercaseLength, specialcaseLength, uppercaseLength, numericLength,)
 
@@ -46,6 +46,16 @@ for(var i = 0; i<passwordLength;i++){
 
 
 
+
+
+
+
+
+
+
+
+
+
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -55,7 +65,6 @@ function writePassword() {
 }
 
 
-// Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
 
