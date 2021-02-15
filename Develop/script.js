@@ -10,7 +10,6 @@ var upperCase = ["A","B","C",]
 var numeric = ["1","2","3"]
 var specialCase = ["!","%","*"]
 var passwordLength = prompt("Please establish length of password")
-console.log(passwordLength)
 
 var lowercaseLength = confirm("Please choose lowercase")
 var specialcaseLength = confirm("Please choose specialcase")
